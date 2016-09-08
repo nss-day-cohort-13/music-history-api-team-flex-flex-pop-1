@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('music_history', ['ngRoute'])
+angular.module('music_history', ['ngRoute', 'angular.filter'])
 
  .factory('RootFactory', ($http, $timeout) => {
    let apiRoot = null;
