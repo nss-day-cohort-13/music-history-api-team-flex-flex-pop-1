@@ -13,32 +13,32 @@ def api_root(request, format=None):
         "songs": reverse("songs-list", request=request, format=format)
     })
 
-class ArtistList(viewsets.ModelViewSet):
+class ArtistView(viewsets.ModelViewSet):
     queryset = Artist.objects.all()
     serializer_class = ArtistSerializer
 
-class ArtistDetail(viewsets.ModelViewSet):
-    queryset = Artist.objects.all()
-    serializer_class = ArtistSerializer
-    lookup_field = 'name'
+# class ArtistDetail(viewsets.ModelViewSet):
+#     queryset = Artist.objects.all()
+#     serializer_class = ArtistSerializer
+#     lookup_field = 'name'
 
-class AlbumList(viewsets.ModelViewSet):
+class AlbumView(viewsets.ModelViewSet):
     queryset = Album.objects.all()
     serializer_class = AlbumSerializer
 
-class AlbumDetail(viewsets.ModelViewSet):
-    queryset = Album.objects.all()
-    serializer_class = AlbumSerializer
-    lookup_field = 'title'
+# class AlbumDetail(viewsets.ModelViewSet):
+#     queryset = Album.objects.all()
+#     serializer_class = AlbumSerializer
+#     lookup_field = 'title'
 
-class SongList(viewsets.ModelViewSet):
+class SongView(viewsets.ModelViewSet):
     queryset = Songs.objects.all()
     serializer_class = SongSerializer
 
-class SongDetail(viewsets.ModelViewSet):
-    queryset = Songs.objects.all()
-    serializer_class = SongSerializer
-    lookup_field = 'title'
+# class SongDetail(viewsets.ModelViewSet):
+#     queryset = Songs.objects.all()
+#     serializer_class = SongSerializer
+#     lookup_field = 'title'
 
 # @api_view(['GET', 'POST'])
 # def artist_list(request, format=None):

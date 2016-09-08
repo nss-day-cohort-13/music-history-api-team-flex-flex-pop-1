@@ -3,9 +3,9 @@ from django.conf.urls import url, include
 from music_history import views
 
 router = routers.DefaultRouter()
-router.register(r'artists', views.ArtistList)
-router.register(r'albums', views.AlbumList)
-router.register(r'songs', views.SongList)
+router.register(r'artists', views.ArtistView)
+router.register(r'albums', views.AlbumView)
+router.register(r'songs', views.SongView)
 
 
 urlpatterns = [
