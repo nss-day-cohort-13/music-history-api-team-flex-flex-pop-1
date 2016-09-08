@@ -1,0 +1,17 @@
+{
+  "name": "musicHistory",
+  "homepage": "https://github.com/nss-day-cohort-13/music-history-api-team-flex-flex-pop-1",
+  "authors": [
+    "Damon Romano <rdromano@mac.com>"
+  ],
+  "description": "Artist/Album/Song tracking app built in Django and Angular",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
