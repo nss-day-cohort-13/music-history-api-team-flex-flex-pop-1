@@ -5,7 +5,7 @@ from rest_framework.reverse import reverse
 from music_history.serializers import ArtistSerializer, AlbumSerializer, SongSerializer
 from music_history.models import *
 
-@api_view(['GET'])
+@api_view(['GET', 'POST', 'PUT', 'DELETE'])
 def api_root(request, format=None):
     return Response({
         "artists": reverse("artist-list", request=request, format=format),
