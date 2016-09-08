@@ -2,27 +2,17 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from music_history.serializers import SnippetSerializer
+from music_history.serializers import ArtistSerializer, AlbumSerializer, SongsSerializer
 from rest_framework import status
 from rest_framework import decorators
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from music_history.models import Snippet
-from music_history.serializers import SnippetSerializer
-
-# class JSONResponse(HttpResponse):
-#     """
-#     An HttpResponse that renders its content into JSON.
-#     """
-#     def __init__(self, data, **kwargs):
-#         content = JSONRenderer().render(data)
-#         kwargs['content_type'] = 'application/json'
-#         super(JSONResponse, self).__init__(content, **kwargs)
+from music_history.models import *
 
 @api_view(['GET', 'POST'])
 def artist_list(request, format=None):
     """
-    List all code artist, or create a new snippet.
+    List all artists, or create a new artist.
     """
     if request.method == 'GET':
         artist = Artist.objects.all()
@@ -63,7 +53,7 @@ def artist_detail(request, pk, format=None):
 @api_view(['GET', 'POST'])
 def album_list(request, format=None):
     """
-    List all code artist, or create a new snippet.
+    List all albums, or create a new album.
     """
     if request.method == 'GET':
         album = Album.objects.all()
@@ -104,7 +94,7 @@ def album_detail(request, pk, format=None):
 @api_view(['GET', 'POST'])
 def songs_list(request, format=None):
     """
-    List all code songs, or create a new snippet.
+    List all songs, or create a new song.
     """
     if request.method == 'GET':
         songs = Songs.objects.all()
@@ -120,7 +110,7 @@ def songs_list(request, format=None):
 @api_view(['GET', 'PUT', 'DELETE'])
 def songs_detail(request, pk, format=None):
     """
-    Retrieve, update or delete a songs instance.
+    Retrieve, update or delete a song instance.
     """
     try:
         songs = Songs.objects.get(pk=pk)
