@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'music_history.apps.MusicHistoryConfig',
+    'music_history',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
