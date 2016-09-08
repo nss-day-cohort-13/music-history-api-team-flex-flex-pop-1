@@ -1,7 +1,13 @@
-from django.conf.urls import url
+from rest_framework import routers
+from django.conf.urls import url, include
 from music_history import views
 
+router = routers.DefaultRouter()
+router.register(r'artists', views.ArtistView)
+router.register(r'albums', views.AlbumView)
+router.register(r'songs', views.SongView)
+
+
 urlpatterns = [
-    url(r'^music_history/$', views.artist_list),
-    url(r'^music_history/(?P<pk>[0-9]+)/$', views.artist_detail),
+    url(r'^', include(router.urls)),
 ]
