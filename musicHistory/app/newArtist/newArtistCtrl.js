@@ -18,7 +18,7 @@ angular.module('music_history')
     .then(res => {
       // getArtistList()
       newPerformer.name = '';
-      $location.path('/#/');
+      $location.path('/');
 
     }, err => console.log(err))
   }

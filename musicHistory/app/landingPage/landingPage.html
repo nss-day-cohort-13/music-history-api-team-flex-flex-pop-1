@@ -6,6 +6,7 @@
                 <label class="control-label" for="artistFilter">Artist:</label>
                 <select name="artistFilter"
                         ng-model="artistFilter"
+                        ng-change="filterByArtist(artistFilter)"
                         ng-options="artist.name for artist in apiArtists"
                         class="form-control">
                     <option value="">All Artists</option>}
@@ -18,44 +19,46 @@
               <label class="control-label" for="albumFilter">Album:</label>
               <select name="albumFilter"
                       ng-model="albumFilter"
+                      ng-change="filterByAlbum(albumFilter)"
                       ng-options="album.title for album in apiAlbums"
                       class="form-control">
                   <option value="">All Albums</option>
               </select>
             </div>
         </div>
-        <!-- <div>
+        <div>
           <label class='control-label' for="genreFilter">Genre:</label>
           <select name="genreFilter"
                   ng-model="genreFilter"
+                  ng-change="filterByGenre(genreFilter)"
                   ng-options="album.genre for album in apiAlbums"
                   class="form-control">
                   <option value="">All Genres</option>
           </select>
-        </div> -->
+        </div>
     </form>
   </div>
 
-  <div class="col-sm-5 col-sm-offset-1">
+  <!-- <div class="col-sm-5 col-sm-offset-1">
       <div ng-repeat="song in apiSongs || undefined">
-
-          <div ng-repeat="album in apiAlbums | filter: albumFilter || undefined" ng-if="song.album == album.url">
-
+          <div ng-repeat="album in apiAlbums | filter: albumFilter | filter: genreFilter || undefined" ng-if="song.album == album.url">
               <div ng-repeat="artist in apiArtists | filter: artistFilter || undefined" ng-if="album.artist == artist.url">
                     <h5>{{ song.title }}</h5>
-                    <p>Artist: {{ artist.name }} | Album: {{ album.title }} | Genre: {{ album.genre }}
+                    <p>Artist: {{ artist.name }} | Album: {{ album.title }} | Genre: {{ album.genre }} -->
                     <!-- <button class="btn btn-xs pull-right" ng-click="home.deleteTrack(track)">Delete</button>
                     <button class="btn btn-xs pull-right" ng-click="home.editToggle(track, album, artist)">Edit</button> -->
-                    </p>
+                    <!-- </p>
               </div>
           </div>
       </div>
+  </div> -->
+
+  <div class='col-sm-5 col-sm-offset-1'>
+    <div ng-repeat="song in filteredSongs">
+      <h5>{{song.title}}</h5>
+    </div>
   </div>
 </div>
-
-
-
-
 
 
 

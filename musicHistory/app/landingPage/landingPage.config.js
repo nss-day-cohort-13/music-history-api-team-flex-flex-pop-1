@@ -11,6 +11,7 @@ angular.module("music_history")
        controllerAs: 'newPerformer',
        templateUrl: '/app/newArtist/newArtist.html'
      })
+    //  .otherwise('/')
     //  .when("/addNewAlbum", {
     //    controller: 'newAlbumCtrl',
     //    templateUrl: '/app/newAlbum/newAlbum.html'
