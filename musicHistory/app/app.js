@@ -3,7 +3,6 @@
 angular.module('music_history', ['ngRoute', 'angular.filter'])
 
  .factory('RootFactory', ($http, $timeout) => {
-   let apiRoot = null;
    let httpGet = $http.get("http://localhost:8000");
 
    return {

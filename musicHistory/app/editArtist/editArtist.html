@@ -1,0 +1,24 @@
+<h1>This is the edit artist page</h1>
+<label class="control-label" for="songFilter">Artist/Members:</label>
+<input ng-model="nameFilter" placeholder="What are you looking for?" size='50'>
+<table>
+  <thead>
+    <tr>
+      <th>Artist</th>
+      <th>Year Began</th>
+      <th>Members</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="artist in editArtist.artistsData | filter: nameFilter">
+      <td>{{ artist.name }}</td>
+      <td>{{ artist.year_began }}</td>
+      <td>{{ artist.members }}</td>
+      <td><button ng-click="editArtist.editArtistInfo(artist)">Edit</button></td>
+      <td><button ng-click="editArtist.deleteArtistInfo(artist)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <form>
+</form> -->

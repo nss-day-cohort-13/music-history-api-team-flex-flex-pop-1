@@ -20,10 +20,16 @@ angular.module("music_history")
     //    controller: 'newSongCtrl',
     //    templateUrl: '/app/newSong/newSong.html'
     //  })
-    //  .when("/editArtist", {
-    //    controller: 'editArtistCtrl',
-    //    templateUrl: '/app/editArtist/editArtist.html'
-    //  })
+     .when("/editArtist", {
+       controller: 'editArtistCtrl',
+       controllerAs: 'editArtist',
+       templateUrl: '/app/editArtist/editArtist.html'
+     })
+     .when("/editArtistInfo", {
+       controller: 'editArtistCtrl',
+       controllerAs: 'editArtist',
+       templateUrl: '/app/editArtist/editArtistInfo.html'
+     })
     //  .when("/editAlbum", {
     //    controller: 'editAlbumCtrl',
     //    templateUrl: '/app/editAlbum/editAlbum.html'
