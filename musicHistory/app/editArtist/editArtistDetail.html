@@ -1,0 +1,12 @@
+<h1>edit artist detail page</h1>
+<p>Artist Info</p>
+<p>{{editArtistDetail.artist.id}}</p>
+<form ng-model="editArtistDetail.artist.id">
+  <label for="artistName">Artist Name</label>
+  <input name="artistName" ng-model="editArtistDetail.artist.name">
+  <label for="yearBegan">Year Began</label>
+  <input name="yearBegan" ng-model="editArtistDetail.artist.year_began">
+  <label for="members">Members</label>
+  <input name="members" ng-model='editArtistDetail.artist.members'>
+  <button ng-click='editArtistDetail.edit()'>submit</button>
+</form>

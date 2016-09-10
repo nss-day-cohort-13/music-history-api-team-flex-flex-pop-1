@@ -25,10 +25,10 @@ angular.module("music_history")
        controllerAs: 'editArtist',
        templateUrl: '/app/editArtist/editArtist.html'
      })
-     .when("/editArtistInfo", {
-       controller: 'editArtistCtrl',
-       controllerAs: 'editArtist',
-       templateUrl: '/app/editArtist/editArtistInfo.html'
+     .when("/editArtist/:artistId", {
+       controller: 'editArtistDetailCtrl',
+       controllerAs: 'editArtistDetail',
+       templateUrl: '/app/editArtist/editArtistDetail.html'
      })
     //  .when("/editAlbum", {
     //    controller: 'editAlbumCtrl',

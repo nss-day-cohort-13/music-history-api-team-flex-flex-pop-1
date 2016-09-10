@@ -14,8 +14,8 @@
       <td>{{ artist.name }}</td>
       <td>{{ artist.year_began }}</td>
       <td>{{ artist.members }}</td>
-      <td><button ng-click="editArtist.editArtistInfo(artist)">Edit</button></td>
-      <td><button ng-click="editArtist.deleteArtistInfo(artist)">Delete</button></td>
+      <td><a href='/#/editArtist/{{artist.id}}'>Edit</a></td>
+      <!-- <td><button ng-click="editArtist.deleteArtistInfo(artist)">Delete</button></td> -->
     </tr>
   </tbody>
 </table>

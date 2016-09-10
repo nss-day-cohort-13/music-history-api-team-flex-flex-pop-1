@@ -7,6 +7,8 @@ angular.module('music_history')
 
   editArtist.artistObject = {}
 
+  console.log('start controller');
+
   RootFactory.getApiRoot()
   .then(root => {
     // console.log('root', root);
