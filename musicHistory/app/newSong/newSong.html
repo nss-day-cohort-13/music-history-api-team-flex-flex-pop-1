@@ -1,13 +1,13 @@
-<!-- <h1>{{newPerformer.Artists}}</h1> -->
+<!-- <h1>{{newPerformer.Songs}}</h1> -->
 <form class="" method="post">
     <div class="form-group">
-        <label  for="newArtistName">Add New Artist</label>
+        <label  for="newSongName">Add New Song</label>
         <input  class="form-control"
                 type="text"
-                name="newArtistName"
+                name="newSongName"
                 value=""
                 ng-model="newPerformer.name"
-                placeholder="Artist Name">
+                placeholder="Song Name">
 
         <label  for="yearBegan">Date Founded</label>
         <input  class="form-control"
@@ -28,7 +28,7 @@
         <input  type="button"
                 name="name"
                 value="Submit"
-                ng-click="newPerformer.newArtist()"
+                ng-click="newPerformer.newSong()"
                 class="btn btn-primary">
     </div>
 </form>
