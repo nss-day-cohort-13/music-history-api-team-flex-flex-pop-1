@@ -11,14 +11,16 @@ angular.module("music_history")
                 controllerAs: 'newPerformer',
                 templateUrl: '/app/newArtist/newArtist.html'
             })
-            //  .when("/addNewAlbum", {
-            //    controller: 'newAlbumCtrl',
-            //    templateUrl: '/app/newAlbum/newAlbum.html'
-            //  })
-            //  .when("/addNewSong", {
-            //    controller: 'newSongCtrl',
-            //    templateUrl: '/app/newSong/newSong.html'
-            //  })
+             .when("/addNewAlbum", {
+               controller: 'newAlbumCtrl',
+               controllerAs: 'newRecord',
+               templateUrl: '/app/newAlbum/newAlbum.html'
+             })
+             .when("/addNewSong", {
+               controller: 'newSongCtrl',
+               controller: 'newSong',
+               templateUrl: '/app/newSong/newSong.html'
+             })
             //  .when("/editArtist", {
             //    controller: 'editArtistCtrl',
             //    templateUrl: '/app/editArtist/editArtist.html'

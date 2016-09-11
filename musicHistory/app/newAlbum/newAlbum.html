@@ -1,34 +1,35 @@
 <!-- <h1>{{newPerformer.Albums}}</h1> -->
 <form class="" method="post">
     <div class="form-group">
-        <label  for="newAlbumName">Add New Album</label>
+        <label  for="title">Add New Album</label>
         <input  class="form-control"
                 type="text"
-                name="newAlbumName"
-                value=""
-                ng-model="newPerformer.name"
-                placeholder="Album Name">
+                name="title"
+                ng-model="newRecord.albumTitle">
 
-        <label  for="yearBegan">Date Founded</label>
+        <label  for="genre">Genre</label>
         <input  class="form-control"
                 type="text"
-                name="yearBegan"
-                value=""
-                ng-model="newPerformer.yearBegan"
-                placeholder="MM/DD/YYYY">
+                name="genre"
+                ng-model="newRecord.genre">
 
-        <label  for="members">Band Members</label>
+        <label  for="yearReleased">Year Released</label>
         <input  class="form-control"
                 type="text"
-                name="members"
-                value=""
-                ng-model="newPerformer.members"
-                placeholder="members">
+                name="yearReleased"
+                ng-model="newRecord.yearReleased"
+                placeholder="YYYY">
+
+        <label for='albumArtist'>Artist</label>
+        <select ng-model="newRecord.albumArtist"
+                ng-options="artist.name for artist in newRecord.artists">
+                <option></option>
+        </select>
 
         <input  type="button"
                 name="name"
                 value="Submit"
-                ng-click="newPerformer.newAlbum()"
+                ng-click="newRecord.newAlbum()"
                 class="btn btn-primary">
     </div>
 </form>
